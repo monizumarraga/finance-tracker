@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "user/registrations" }
+  get 'my_friends', to:"users#my_friends"
+  
   get 'welcome/index'
   
   root 'welcome#index';
